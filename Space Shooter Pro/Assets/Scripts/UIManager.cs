@@ -15,7 +15,7 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private Text _gameOverText;
     [SerializeField]
-    private Text _restartText;
+    private Button _restartButton;
     [SerializeField]
     private GameManager _gameManager;
 
@@ -54,7 +54,7 @@ public class UIManager : MonoBehaviour
     void GameOverSequence()
     {
         _gameManager.GameOver();
-        _restartText.gameObject.SetActive(true);
+        _restartButton.gameObject.SetActive(true);
         StartCoroutine(GameOverFlickerRoutine());
     }
 

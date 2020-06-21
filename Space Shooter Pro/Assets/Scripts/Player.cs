@@ -89,7 +89,7 @@ public class Player : MonoBehaviour
         if (CrossPlatformInputManager.GetButtonDown("Fire") && Time.time > _canFire)
         {
             Debug.Log("android");
-            FireLaser();
+            //FireLaser();
         }
 #endif
 
@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && Time.time > _canFire)
         {
             Debug.Log("editor");
-            FireLaser();
+            //FireLaser();
         }
 #endif
 
@@ -157,7 +157,7 @@ public class Player : MonoBehaviour
         // transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, -3.3f, 0), 0);
     }
 
-    void FireLaser()
+    public void FireLaser()
     {
         
         _canFire = Time.time + _fireRate;
